@@ -1,0 +1,35 @@
+version: "3"
+
+services:
+  ubuntu-01:
+    build: .
+    image: ubuntu-dev
+    container_name: ubuntu-01
+    hostname: ubuntu-01
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+    cap_add:
+      - ALL
+    ports:
+      - "11022:22"
+      - "11080:80"
+    volumes:
+      - ./data:/data
+    # command: "/usr/sbin/sshd -D"
+  ubuntu-02:
+    build: .
+    image: ubuntu-dev
+    container_name: ubuntu-02
+    hostname: ubuntu-02
+    tty: true
+    environment:
+      TZ: Asia/Tokyo
+    cap_add:
+      - ALL
+    ports:
+      - "11023:22"
+      - "11081:80"
+    volumes:
+      - ./data:/data
+    # command: "/usr/sbin/sshd -D"
