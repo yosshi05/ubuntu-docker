@@ -1,8 +1,8 @@
 # description
 create ubuntu base container.
 
-# reference
-Ubuntu - Official Image | Docker Hub
+# image
+Ubuntu - Official Image | Docker Hub  
 https://hub.docker.com/_/ubuntu
 
 # build
@@ -13,7 +13,7 @@ https://hub.docker.com/_/ubuntu
 .\bat\up.bat  
 .\sh\up.bat
 
-# up
+# down
 .\bat\down.bat  
 .\sh\down.bat
 
